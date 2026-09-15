@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #0c1014;
+  --color-surface: #131a20;
+  --color-raised: #1a232b;
+  --color-edge: #26313b;
+  --color-edge-bright: #35434f;
+  --color-bone: #e6ecf2;
+  --color-ash: #93a2b1;
+  --color-dim: #64748b;
+  --color-signal: #e9a13b;
+  --color-signal-dim: #a97a2f;
+  --color-signal-wash: rgba(233, 161, 59, 0.12);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-hero: clamp(2.4rem, 6.5vw, 4.25rem);
+  --text-title: clamp(1.9rem, 4vw, 2.75rem);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-edge);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-void);
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-void);
+    color: var(--color-bone);
+    font-family: var(--font-display);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: var(--color-void);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    font-weight: 600;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-void);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-edge);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-edge-bright);
+  }
+}
+
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .rule-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--color-signal);
+  }
+
+  .prose-body {
+    color: var(--color-ash);
+    max-width: 68ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

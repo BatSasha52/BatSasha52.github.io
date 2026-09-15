@@ -27,49 +27,6 @@ export const categories: Category[] = [
 
 export const projects: Project[] = [
   {
-    slug: "vulkan-renderer",
-    name: "Vulkan Renderer",
-    category: "engine",
-    featured: true,
-    summary:
-      "A renderer written from scratch in Vulkan with multithreaded command recording and a live profiling overlay.",
-    description: [
-      "A from-scratch real-time renderer built directly on Vulkan, with no engine or framework underneath it. The goal was to understand the whole path from a scene description on disk to submitted command buffers, rather than to wrap an existing abstraction.",
-      "Command recording is spread across worker threads using secondary command buffers, so scene traversal and draw submission scale with core count instead of bottlenecking on a single recording thread. Scenes are described in data rather than code, so geometry, materials and pass configuration can change without a rebuild.",
-      "A profiling overlay renders live GPU and CPU timings in-frame, which turns optimization into a measurement exercise instead of guesswork.",
-    ],
-    role: "Solo developer",
-    highlights: [
-      "Multithreaded command buffer recording across worker threads",
-      "Data-driven scene and material loading",
-      "In-frame GPU and CPU profiling overlay",
-      "Explicit synchronisation, descriptor and memory management",
-    ],
-    tech: ["C++", "Vulkan", "GLSL", "SPIR-V", "Multithreading", "CMake"],
-    links: [],
-  },
-  {
-    slug: "job-system",
-    name: "Work-Stealing Job System",
-    category: "engine",
-    featured: true,
-    summary:
-      "A small standalone C++ library for parallel task scheduling using per-thread deques and work stealing.",
-    description: [
-      "A compact, dependency-free job system library for parallelising engine-side work. Each worker thread owns a local deque and pushes and pops from one end; idle threads steal from the opposite end of other queues, which keeps contention low while still balancing uneven workloads.",
-      "Built as a standalone library rather than as part of a larger project, so the scheduling logic could be isolated, tested and benchmarked on its own. It pairs directly with the Vulkan renderer, which is where the need for it came from.",
-    ],
-    role: "Solo developer",
-    highlights: [
-      "Per-thread work-stealing deques",
-      "Job dependencies and wait handles",
-      "Lock-light design tuned for low contention",
-      "Standalone, embeddable, no external dependencies",
-    ],
-    tech: ["C++", "Multithreading", "Atomics", "Lock-free structures"],
-    links: [],
-  },
-  {
     slug: "call-of-duty-black-ops-7",
     name: "Call of Duty: Black Ops 7",
     category: "engine",

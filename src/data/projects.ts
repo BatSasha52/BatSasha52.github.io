@@ -130,26 +130,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "asset-validator",
-    name: "Asset Validator",
-    category: "tools",
-    summary:
-      "Unreal Engine 5 editor plugin in C++ that lints project content and batch-fixes what it can.",
-    description: [
-      "Content problems in an Unreal project are cheap to fix early and expensive to fix late: assets named inconsistently, textures shipped at the wrong resolution, meshes missing LODs, orphaned files nobody references any more.",
-      "This plugin walks project content and reports all of it from an editor panel, with batch rename fixes for the issues that can be resolved mechanically. The same checks run headless through a commandlet, so content standards can be enforced in CI rather than relied on as team etiquette.",
-    ],
-    role: "Solo developer",
-    highlights: [
-      "Naming convention, texture size, LOD and orphaned-asset checks",
-      "Batch rename fixes applied from the editor",
-      "Custom Slate editor panel",
-      "Commandlet entry point for CI enforcement",
-    ],
-    tech: ["C++", "Unreal Engine 5", "Slate", "Editor Scripting", "Commandlets"],
-    links: [],
-  },
-  {
     slug: "nosaints-new-dawn",
     name: "NoSaints: New Dawn",
     category: "unity",

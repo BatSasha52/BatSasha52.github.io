@@ -33,7 +33,7 @@ export const profile: Profile = {
     {
       label: "LinkedIn",
       value: "linkedin.com/in/oleksandr-pryimak",
-      url: "",
+      url: "www.linkedin.com/in/oleksandr-pryimak-bba75333a",
     },
     {
       label: "Phone",

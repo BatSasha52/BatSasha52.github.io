@@ -12,6 +12,8 @@ export default function About() {
     description: profile.bio[0],
   });
 
+  const hobbies = profile.hobbies ?? [];
+
   return (
     <div className="shell py-16 sm:py-24">
       <SectionHeading label="About" title="Who I am and what I work on" />
@@ -80,6 +82,22 @@ export default function About() {
           ))}
         </div>
       </div>
+
+      {hobbies.length > 0 && (
+        <div className="mt-24">
+          <SectionHeading
+            label="Outside work"
+            title="What I do when I'm not shipping"
+          />
+          <div className="space-y-5">
+            {hobbies.map((paragraph, i) => (
+              <Reveal key={i} delay={i * 0.05}>
+                <p className="prose-body text-[1.02rem]">{paragraph}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

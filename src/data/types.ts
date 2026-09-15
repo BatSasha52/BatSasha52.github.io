@@ -60,4 +60,5 @@ export interface Profile {
   photo: string;
   cv: string;
   contacts: ContactLink[];
+  hobbies?: string[];
 }

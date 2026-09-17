@@ -2,23 +2,23 @@ import type { Profile } from "./types";
 
 export const profile: Profile = {
   name: "Oleksandr Pryimak",
-  role: "Gameplay & Engine Programmer",
+  role: "Programmer, game developer",
   tagline: "C++ · Unreal Engine 5 · Unity",
-  location: "Warsaw, Poland — open to relocation",
+  location: "Warsaw, Poland (open to relocation)",
 
   intro:
-    "I build the systems underneath games: engine internals, build pipelines, and the tools that keep a team moving. Previously a programming intern on Call of Duty: Black Ops 7 at Activision Central Tech.",
+    "Ex-Activision programming intern. Computer Science bachelor specializing in game development, with practical experience in Unity and Unreal Engine, C++ software engineering, game design and level design.",
 
   bio: [
-    "I am a gameplay and engine programmer based in Warsaw. My work sits close to the engine: character movement and animation systems on one side, build pipelines, asset tooling and crash diagnostics on the other.",
-    "At Activision Central Tech I worked inside a large-scale C++ codebase on the asset build pipeline for Call of Duty: Black Ops 7, implementing content-sensitive caching and parallelising hot paths. Compilation time for certain classes dropped from 67 seconds to 0.14, and every refactor had to produce binary-identical output, which taught me more about disciplined engineering than any course did.",
-    "At Cenoir Studios I work on gameplay: a character movement system built on MVP architecture and ScriptableObject state machines, procedural animation integration, and dependency injection across a feature-oriented codebase.",
-    "Outside production work I build developer tooling from scratch: CLI tools for build automation, release notes and crash triage. I like problems where the answer is measurable, whether that is a frame budget, a compile time, or a crash count.",
+    "I am a gameplay and engine programmer based in Warsaw. I work in C++, C# and Python, across Unreal Engine, Unity and proprietary engine code.",
+    "At Activision Central Tech I worked in a large-scale C++ codebase on the asset build pipeline for Call of Duty: Black Ops 7. I added conditional cache loading and saving based on transient zone entity hash, parallelized functions to improve CPU usage, and reduced compilation time of certain classes by up to 99% (67 sec to 0.14 sec). Every refactor had to leave the output binary-identical, which was verified through systematic testing.",
+    "At Cenoir Studios I work on gameplay. I implemented the character movement system using MVP architecture and ScriptableObject-based state machines, I am integrating KINEMATION procedural animation for movement, and I work with the Zenject dependency injection framework across a feature-oriented architecture.",
+    "Alongside production work I build developer tooling: command-line tools for build automation, release notes and crash triage, written in Python and integrated with Git and CI.",
   ],
 
   hobbies: [
-    "I play a lot of games and pay attention to how they are built: Uncharted 4, God of War 2018 and Metal Gear Solid 2 for tight, deliberate design, The Witcher 3, Red Dead Redemption 2 and Cyberpunk 2077 for worlds worth staying in.",
-    "I run a YouTube channel in Ukrainian about games and comic book films, and read comics when I am not making or playing something.",
+    "I love playing games, reading comics, watching movies and TV series. I enjoy both short games like \u201CUncharted 4\u201D, \u201CGod of War 2018\u201D and \u201CMetal Gear Solid 2\u201D, as well as longer games, that allow for deep immersion in their worlds like \u201CThe Witcher 3\u201D, \u201CRed Dead Redemption 2\u201D or \u201CCyberpunk 2077\u201D. I even have a YouTube channel (in Ukrainian), where I talk about games and comic book movies.",
+    "In games, I value attention to details, a well-written story, an immersive world and a good mission design. I also love exploring games from a professional perspective, noticing some new layers to them. I enjoy learning new skills and am passionate about developing games.",
   ],
 
   photo: "/photo.jpg",

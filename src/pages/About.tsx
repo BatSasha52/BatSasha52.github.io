@@ -16,7 +16,7 @@ export default function About() {
 
   return (
     <div className="shell py-16 sm:py-24">
-      <SectionHeading label="About" title="Who I am and what I work on" />
+      <SectionHeading label="About" title="About me" />
 
       <div className="grid gap-14 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
         <div className="space-y-5">
@@ -36,7 +36,8 @@ export default function About() {
               </Link>
               <a
                 href={profile.cv}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-edge-bright px-4 py-2 font-mono text-sm text-bone transition-colors hover:border-signal hover:text-signal"
               >
                 Download CV
@@ -59,11 +60,7 @@ export default function About() {
       </div>
 
       <div className="mt-24">
-        <SectionHeading
-          label="Skills"
-          title="Tools and techniques"
-          description="Grouped by where they actually get used rather than rated on a scale."
-        />
+        <SectionHeading label="Skills" title="Skills" />
 
         <div className="grid gap-px border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((group, i) => (
@@ -85,10 +82,7 @@ export default function About() {
 
       {hobbies.length > 0 && (
         <div className="mt-24">
-          <SectionHeading
-            label="Outside work"
-            title="What I do when I'm not shipping"
-          />
+          <SectionHeading label="Outside work" title="Hobbies" />
           <div className="space-y-5">
             {hobbies.map((paragraph, i) => (
               <Reveal key={i} delay={i * 0.05}>

@@ -73,7 +73,8 @@ export default function Nav() {
           ))}
           <a
             href={profile.cv}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="border border-edge-bright px-3 py-1.5 font-mono text-[0.75rem] text-bone transition-colors hover:border-signal hover:text-signal"
           >
             CV
@@ -129,7 +130,8 @@ export default function Nav() {
               ))}
               <a
                 href={profile.cv}
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 w-fit border border-edge-bright px-3 py-1.5 font-mono text-[0.75rem] text-bone"
               >
                 Download CV

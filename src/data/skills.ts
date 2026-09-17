@@ -2,65 +2,49 @@ import type { SkillGroup } from "./types";
 
 export const skills: SkillGroup[] = [
   {
-    title: "Languages",
-    items: ["C++", "C#", "Python", "Java", "SQL", "JavaScript", "GLSL / SPIR-V"],
+    title: "Programming Languages",
+    items: ["C++", "C#", "Java", "Python", "SQL", "JavaScript"],
   },
   {
-    title: "Engines & Graphics",
-    items: [
-      "Unreal Engine 5",
-      "Unity",
-      "Vulkan",
-      "Blueprints",
-      "Proprietary AAA engine (COD Engine)",
-    ],
+    title: "Game Development Tools",
+    items: ["Unreal Engine", "Unity", "Scripting", "Blueprints"],
   },
   {
-    title: "Engine & Systems",
+    title: "Programming Concepts",
     items: [
-      "Multithreading",
-      "Job systems & work stealing",
-      "Memory & cache behaviour",
-      "Profiling",
+      "Object-Oriented Programming",
+      "Game Mechanics",
+      "Debugging",
       "Optimization",
-      "Data-driven design",
-      "Asset build pipelines",
-    ],
-  },
-  {
-    title: "Gameplay",
-    items: [
-      "Character movement",
-      "Animation systems",
-      "State machines",
-      "Dependency injection",
-      "MVP architecture",
-      "Gameplay prototyping",
-    ],
-  },
-  {
-    title: "Tooling & Workflow",
-    items: [
-      "Git",
-      "Perforce",
-      "GitHub Actions",
+      "Profiling",
+      "Multithreading",
       "CI/CD",
-      "Build automation",
-      "pytest",
-      "PowerShell",
-      "Jira",
+      "Automation",
+      "REST / LLM APIs",
     ],
   },
   {
-    title: "Other",
-    items: [
-      "LLM / REST API integration",
-      "Technical documentation",
-      "Code review",
-      "Level design",
-      "English C1–C2",
-      "Ukrainian (native)",
-      "Polish (basic)",
-    ],
+    title: "Mathematics",
+    items: ["Calculus", "Physics", "Game-Related Math", "3D Math"],
+  },
+  {
+    title: "Game Design",
+    items: ["Game Design", "Level Design", "Gameplay Prototyping"],
+  },
+  {
+    title: "Database Management",
+    items: ["Relational Databases", "Database Development"],
+  },
+  {
+    title: "Teamwork",
+    items: ["Professional Communication", "Team Collaboration", "Leading Teams"],
+  },
+  {
+    title: "Tools & Collaboration",
+    items: ["GitHub", "Perforce", "Slack", "Jira", "MS Teams", "Copilot", "Claude"],
+  },
+  {
+    title: "Languages",
+    items: ["English: C1-C2 (Advanced)", "Ukrainian: Native", "Polish: Basic"],
   },
 ];

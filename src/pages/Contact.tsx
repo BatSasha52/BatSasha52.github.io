@@ -46,7 +46,8 @@ export default function Contact() {
             </p>
             <a
               href={profile.cv}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block w-full border border-signal bg-signal px-5 py-3 text-center font-mono text-sm text-void transition-colors hover:bg-transparent hover:text-signal"
             >
               Download CV

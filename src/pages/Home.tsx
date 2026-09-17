@@ -71,7 +71,8 @@ export default function Home() {
                 </Link>
                 <a
                   href={profile.cv}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-edge-bright px-5 py-2.5 font-mono text-sm text-bone transition-colors hover:border-signal hover:text-signal"
                 >
                   Download CV
@@ -108,7 +109,7 @@ export default function Home() {
                 <span className="inline-block h-px w-8 bg-signal" />
                 Selected work
               </p>
-              <h2 className="text-title text-bone">Things I have built</h2>
+              <h2 className="text-title text-bone">Projects</h2>
             </div>
             <Link
               to="/projects"

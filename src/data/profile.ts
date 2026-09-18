@@ -3,7 +3,7 @@ import type { Profile } from "./types";
 export const profile: Profile = {
   name: "Oleksandr Pryimak",
   role: "Programmer, game developer",
-  tagline: "C++ · Unreal Engine 5 · Unity",
+  tagline: "C++ · C# · Python · Unreal Engine 5 · Unity · Multithreading",
   location: "Warsaw, Poland (open to relocation)",
 
   intro:

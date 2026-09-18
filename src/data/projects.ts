@@ -26,7 +26,7 @@ export const categories: Category[] = [
 ];
 
 export const projects: Project[] = [
-  {
+   {
     slug: "call-of-duty-black-ops-7",
     name: "Call of Duty: Black Ops 7",
     category: "engine",
@@ -47,8 +47,16 @@ export const projects: Project[] = [
       "Parallelised functions to improve CPU utilisation",
       "Verified binary-identical output after refactoring",
     ],
-    tech: ["C++", "COD Engine", "Perforce", "Profiling", "Multithreading"],
+    tech: [
+      "C++",
+      "COD Engine",
+      "Perforce",
+      "Multithreading",
+      "Caching & hashing",
+      "Build pipelines",
+    ],
     links: [],
+    videos: [{ label: "Call of Duty: Black Ops 7 — trailer", youtubeId: "pGFYtZD53ZA?si=HYk9TONtPJmiugHc" }],
   },
   {
     slug: "crashtriage",
@@ -69,7 +77,7 @@ export const projects: Project[] = [
       "git blame integration to name the suspect commit",
       "Per-cluster Markdown reports with marked crash line and source context",
     ],
-    tech: ["Python", "Google Gemini API", "Git", "difflib"],
+    tech: ["Python", "Google Gemini API", "Git", "git blame", "difflib", "CLI", "Markdown"],
     links: [
       { label: "GitHub", url: "https://github.com/BatSasha52/crashtriage" },
     ],
@@ -94,7 +102,15 @@ export const projects: Project[] = [
       "Discord and Slack notifications, secrets read from environment only",
       "32-test pytest suite and CI-ready exit codes",
     ],
-    tech: ["Python", "Unity (batchmode)", "C#", "Git", "pytest", "Webhooks"],
+    tech: [
+      "Python",
+      "Unity (batchmode)",
+      "C#",
+      "Git",
+      "pytest",
+      "CI/CD",
+      "Discord & Slack webhooks",
+    ],
     links: [
       { label: "GitHub", url: "https://github.com/BatSasha52/buildpilot" },
     ],
@@ -124,6 +140,8 @@ export const projects: Project[] = [
       "Git",
       "GitHub Actions",
       "pytest",
+      "CI/CD",
+      "CLI",
     ],
     links: [
       { label: "GitHub", url: "https://github.com/BatSasha52/ai-changelog" },
@@ -147,7 +165,17 @@ export const projects: Project[] = [
       "KINEMATION procedural animation integration",
       "Zenject dependency injection across a feature-oriented codebase",
     ],
-    tech: ["Unity", "C#", "Zenject", "KINEMATION", "ScriptableObjects"],
+    tech: [
+      "Unity",
+      "C#",
+      "Zenject",
+      "KINEMATION",
+      "ScriptableObjects",
+      "MVP architecture",
+      "State machines",
+      "Odin Inspector",
+      "UniTask",
+    ],
     links: [],
   },
   {
@@ -168,8 +196,23 @@ export const projects: Project[] = [
       "Level design and game mode design",
       "Exhibited at Women in Tech Summit 2025 and PJATK Museum Night",
     ],
-    tech: ["Unity", "C#", "Multiplayer"],
-    links: [],
+    tech: [
+      "Unity",
+      "C#",
+      "Multiplayer",
+      "Level design",
+      "Game design",
+      "Animation",
+    ],
+    links: [
+      { label: "Defence presentation", url: "https://docs.google.com/presentation/d/1PCfKa4TL0675xc1Cr7v352Y7vjaHob2JKaZgbveW4NM/edit?usp=sharing" },
+      { label: "Game First presentation", url: "https://docs.google.com/presentation/d/1RMIZBvrMJIivOrzQ7Khb0XMjzM9izdMZ-Xs6LusqXgw/edit?usp=sharing" },
+      { label: "Gerybox presentation", url: "https://docs.google.com/presentation/d/1AS-YvkKU51ohzzx0oqPT8wy-uQ_xEXo0/edit?usp=sharing&ouid=112562551441494624838&rtpof=true&sd=true" },
+    ],
+    videos: [
+      { label: "No Saints — final trailer", youtubeId: "vZSnZm2oxQI" },
+      { label: "No Saints — first trailer", youtubeId: "TavsnHNPA_M" },
+    ],
   },
   {
     slug: "salvager",
@@ -188,7 +231,7 @@ export const projects: Project[] = [
       "Field-of-view implementation",
       "Animation integration with Blend Trees",
     ],
-    tech: ["Unity", "C#"],
+    tech: ["Unity", "C#", "2D", "Blend Trees", "Animation"],
     links: [],
   },
   {
@@ -202,8 +245,8 @@ export const projects: Project[] = [
       "Built in six weeks with a team of four. I implemented game mechanics and animation.",
     ],
     role: "Programmer",
-    tech: ["Unity", "C#", "Online multiplayer"],
-    links: [],
+    tech: ["Unity", "C#", "Online multiplayer", "Animation", "Turn-based systems"],
+    links: [{ label: "Presentation", url: "https://docs.google.com/presentation/d/1FSYBIyp_IjGx_u1Pd_p6fM_djTwubbsoXbIIJHoaUBQ/edit?usp=sharing" }],
   },
   {
     slug: "icarus-rising",
@@ -216,7 +259,7 @@ export const projects: Project[] = [
     ],
     role: "Programmer",
     tech: ["Unity", "C#", "Game jam"],
-    links: [],
+    links: [{ label: "Play on itch.io", url: "https://jaho123i.itch.io/icarus-rising" }],
   },
   {
     slug: "space-shooter",
@@ -234,8 +277,17 @@ export const projects: Project[] = [
       "Enemy pathfinding and shooting behaviour",
       "Shooting system, win/loss conditions, widgets and effects",
     ],
-    tech: ["Unreal Engine 5.5", "C++", "Behaviour Trees", "Animation"],
-    links: [],
+    tech: [
+      "Unreal Engine 5.5",
+      "C++",
+      "Behaviour Trees",
+      "State machines",
+      "Skeletal animation",
+      "AI pathfinding",
+      "UMG widgets",
+    ],
+    links: [{ label: "GitHub", url: "https://github.com/BatSasha52/SpaceShooter" }],
+    videos: [{ label: "Space Shooter — gameplay", youtubeId: "LSDVfvAgjvQ" }],
   },
   {
     slug: "crypt-raider",
@@ -253,8 +305,20 @@ export const projects: Project[] = [
       "Calling C++ functions from Blueprints",
       "Modular level design and Lumen lighting",
     ],
-    tech: ["Unreal Engine 5.5", "C++", "Blueprints", "Lumen"],
-    links: [],
+    tech: [
+      "Unreal Engine 5.5",
+      "C++",
+      "Blueprints",
+      "Lumen",
+      "Line tracing",
+      "Actor components",
+      "Level design",
+    ],
+    links: [
+      { label: "GitHub", url: "https://github.com/BatSasha52/CryptRaider" },
+      { label: "itch.io", url: "https://batsasha52.itch.io/crypt-raider" },
+    ],
+    videos: [{ label: "Crypt Raider — gameplay", youtubeId: "M4vLU8tpkEU" }],
   },
   {
     slug: "toon-tanks",
@@ -269,8 +333,19 @@ export const projects: Project[] = [
       "Movement system and enemy AI",
       "Win/loss conditions, widgets, audio and visual effects",
     ],
-    tech: ["Unreal Engine 5.5", "C++", "Blueprints"],
-    links: [],
+    tech: [
+      "Unreal Engine 5.5",
+      "C++",
+      "Blueprints",
+      "Enemy AI",
+      "UMG widgets",
+      "VFX & audio",
+    ],
+    links: [
+      { label: "GitHub", url: "https://github.com/BatSasha52/Toon_Tanks" },
+      { label: "itch.io", url: "https://batsasha52.itch.io/toon-tanks" },
+    ],
+    videos: [{ label: "Toon Tanks — gameplay", youtubeId: "lSMP5GuCAEQ" }],
   },
   {
     slug: "obstacle-assault",
@@ -287,8 +362,17 @@ export const projects: Project[] = [
       "FString, FVector and FRotator usage",
       "GameMode and character class setup",
     ],
-    tech: ["Unreal Engine 5.5", "C++", "Blueprints"],
-    links: [],
+    tech: [
+      "Unreal Engine 5.5",
+      "C++",
+      "Blueprints",
+      "Gameplay framework",
+      "Transforms & vectors",
+    ],
+    links: [
+      { label: "GitHub", url: "https://github.com/BatSasha52/ObstacleAssault" },
+      { label: "itch.io", url: "https://batsasha52.itch.io/obstacle-assault" },
+    ],
   },
   {
     slug: "warehouse-wreck",
@@ -300,8 +384,11 @@ export const projects: Project[] = [
       "A Blueprint-only shooter built in Unreal Engine 5 where the player throws rocks to destroy a warehouse.",
       "Fully visual scripting: Blueprint nodes and pins, maps, actors, components and transforms, and object-oriented fundamentals expressed through Blueprint classes.",
     ],
-    tech: ["Unreal Engine 5.0", "Blueprints"],
-    links: [],
+    tech: ["Unreal Engine 5.0", "Blueprints", "Physics", "Visual scripting"],
+    links: [
+      { label: "GitHub", url: "https://github.com/BatSasha52/WarehouseWreck" },
+      { label: "itch.io", url: "https://batsasha52.itch.io/warehouse-wreck" },
+    ],
   },
 ];
 

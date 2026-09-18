@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { categories, getProject, projects } from "../data/projects";
 import Tag from "../components/Tag";
 import Reveal from "../components/Reveal";
+import YouTubeEmbed from "../components/YouTubeEmbed";
 import NotFound from "./NotFound";
 import { profile } from "../data/profile";
 import { useSeo } from "../hooks/useSeo";
@@ -23,6 +24,8 @@ export default function ProjectDetail() {
   const siblings = projects.filter(
     (p) => p.category === project.category && p.slug !== project.slug
   );
+  const links = project.links.filter((l) => l.url && l.url !== "#");
+  const videos = (project.videos ?? []).filter((v) => v.youtubeId);
 
   return (
     <div className="shell py-16 sm:py-24">
@@ -44,7 +47,7 @@ export default function ProjectDetail() {
         <p className="prose-body mt-5 text-lg">{project.summary}</p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
-          {project.links.map((l) => (
+          {links.map((l) => (
             <a
               key={l.url}
               href={l.url}
@@ -65,6 +68,16 @@ export default function ProjectDetail() {
               <p className="prose-body text-[1.02rem]">{p}</p>
             </Reveal>
           ))}
+
+          {videos.length > 0 && (
+            <Reveal delay={0.08}>
+              <div className="space-y-6 pt-4">
+                {videos.map((v) => (
+                  <YouTubeEmbed key={v.youtubeId} youtubeId={v.youtubeId} label={v.label} />
+                ))}
+              </div>
+            </Reveal>
+          )}
 
           {project.highlights && (
             <Reveal delay={0.12}>
@@ -103,6 +116,26 @@ export default function ProjectDetail() {
               ))}
             </div>
           </div>
+
+          {links.length > 0 && (
+            <div className="border border-edge bg-surface/60 p-5">
+              <h2 className="mb-3 font-mono text-[0.72rem] text-dim">Links</h2>
+              <ul className="space-y-2">
+                {links.map((l) => (
+                  <li key={l.url}>
+                    <a
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-ash transition-colors hover:text-signal"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {siblings.length > 0 && (
             <div className="border border-edge bg-surface/60 p-5">

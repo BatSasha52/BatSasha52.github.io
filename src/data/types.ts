@@ -15,6 +15,11 @@ export interface ProjectLink {
   url: string;
 }
 
+export interface ProjectVideo {
+  label: string;
+  youtubeId: string;
+}
+
 export interface Project {
   slug: string;
   name: string;
@@ -25,6 +30,7 @@ export interface Project {
   highlights?: string[];
   tech: string[];
   links: ProjectLink[];
+  videos?: ProjectVideo[];
   featured?: boolean;
   year?: string;
 }

@@ -56,7 +56,43 @@ export const projects: Project[] = [
       "Build pipelines",
     ],
     links: [],
-    videos: [{ label: "Call of Duty: Black Ops 7 — trailer", youtubeId: "pGFYtZD53ZA?si=HYk9TONtPJmiugHc" }],
+    videos: [{ label: "Call of Duty: Black Ops 7 — trailer", youtubeId: "pGFYtZD53ZA" }],
+  },
+  {
+    slug: "no-saints",
+    name: "No Saints",
+    category: "unity",
+    summary:
+      "Multiplayer FPS diploma project set in an alternative-history 1930s USA.",
+    description: [
+      "A multiplayer first-person shooter built as a diploma project, set in an alternative-history 1930s United States.",
+      "I worked across design and code: level design, game mechanics, and the movement and combat implementation. The movement system was mostly mine, and the goal there was smooth, readable control across several distinct mechanics rather than a single locomotion mode.",
+      "The game has been exhibited publicly several times, including as a playable installation at PJATK Museum Night with multiplayer sessions running across multiple devices.",
+    ],
+    role: "Game Designer, Level Designer, Programmer",
+    highlights: [
+      "Movement system supporting multiple distinct mechanics",
+      "Shooting and combat gameplay",
+      "Level design and game mode design",
+      "Exhibited at Women in Tech Summit 2025 and PJATK Museum Night",
+    ],
+    tech: [
+      "Unity",
+      "C#",
+      "Multiplayer",
+      "Level design",
+      "Game design",
+      "Animation",
+    ],
+    links: [
+      { label: "Defence presentation", url: "https://docs.google.com/presentation/d/1PCfKa4TL0675xc1Cr7v352Y7vjaHob2JKaZgbveW4NM/edit?usp=sharing" },
+      { label: "Game First presentation", url: "https://docs.google.com/presentation/d/1RMIZBvrMJIivOrzQ7Khb0XMjzM9izdMZ-Xs6LusqXgw/edit?usp=sharing" },
+      { label: "Gerybox presentation", url: "https://docs.google.com/presentation/d/1AS-YvkKU51ohzzx0oqPT8wy-uQ_xEXo0/edit?usp=sharing&ouid=112562551441494624838&rtpof=true&sd=true" },
+    ],
+    videos: [
+      { label: "No Saints — final trailer", youtubeId: "vZSnZm2oxQI" },
+      { label: "No Saints — first trailer", youtubeId: "TavsnHNPA_M" },
+    ],
   },
   {
     slug: "crashtriage",
@@ -177,42 +213,6 @@ export const projects: Project[] = [
       "UniTask",
     ],
     links: [],
-  },
-  {
-    slug: "no-saints",
-    name: "No Saints",
-    category: "unity",
-    summary:
-      "Multiplayer FPS diploma project set in an alternative-history 1930s USA.",
-    description: [
-      "A multiplayer first-person shooter built as a diploma project, set in an alternative-history 1930s United States.",
-      "I worked across design and code: level design, game mechanics, and the movement and combat implementation. The movement system was mostly mine, and the goal there was smooth, readable control across several distinct mechanics rather than a single locomotion mode.",
-      "The game has been exhibited publicly several times, including as a playable installation at PJATK Museum Night with multiplayer sessions running across multiple devices.",
-    ],
-    role: "Game Designer, Level Designer, Programmer",
-    highlights: [
-      "Movement system supporting multiple distinct mechanics",
-      "Shooting and combat gameplay",
-      "Level design and game mode design",
-      "Exhibited at Women in Tech Summit 2025 and PJATK Museum Night",
-    ],
-    tech: [
-      "Unity",
-      "C#",
-      "Multiplayer",
-      "Level design",
-      "Game design",
-      "Animation",
-    ],
-    links: [
-      { label: "Defence presentation", url: "https://docs.google.com/presentation/d/1PCfKa4TL0675xc1Cr7v352Y7vjaHob2JKaZgbveW4NM/edit?usp=sharing" },
-      { label: "Game First presentation", url: "https://docs.google.com/presentation/d/1RMIZBvrMJIivOrzQ7Khb0XMjzM9izdMZ-Xs6LusqXgw/edit?usp=sharing" },
-      { label: "Gerybox presentation", url: "https://docs.google.com/presentation/d/1AS-YvkKU51ohzzx0oqPT8wy-uQ_xEXo0/edit?usp=sharing&ouid=112562551441494624838&rtpof=true&sd=true" },
-    ],
-    videos: [
-      { label: "No Saints — final trailer", youtubeId: "vZSnZm2oxQI" },
-      { label: "No Saints — first trailer", youtubeId: "TavsnHNPA_M" },
-    ],
   },
   {
     slug: "salvager",

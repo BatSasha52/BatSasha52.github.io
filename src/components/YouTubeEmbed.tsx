@@ -5,8 +5,28 @@ interface Props {
   label: string;
 }
 
+function extractId(raw: string): string {
+  const value = raw.trim();
+
+  const patterns = [
+    /(?:youtube\.com\/watch\?(?:.*&)?v=)([\w-]{11})/,
+    /(?:youtu\.be\/)([\w-]{11})/,
+    /(?:youtube\.com\/embed\/)([\w-]{11})/,
+    /(?:youtube\.com\/shorts\/)([\w-]{11})/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = value.match(pattern);
+    if (match) return match[1];
+  }
+
+  const bare = value.match(/^[\w-]{11}/);
+  return bare ? bare[0] : value;
+}
+
 export default function YouTubeEmbed({ youtubeId, label }: Props) {
   const [playing, setPlaying] = useState(false);
+  const id = extractId(youtubeId);
 
   return (
     <figure className="m-0">
@@ -14,7 +34,7 @@ export default function YouTubeEmbed({ youtubeId, label }: Props) {
         {playing ? (
           <iframe
             className="absolute inset-0 h-full w-full"
-            src={`https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0`}
+            src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
             title={label}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -27,9 +47,16 @@ export default function YouTubeEmbed({ youtubeId, label }: Props) {
             className="group absolute inset-0 h-full w-full cursor-pointer"
           >
             <img
-              src={`https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`}
+              src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
               alt=""
               loading="lazy"
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (!img.dataset.fallback) {
+                  img.dataset.fallback = "1";
+                  img.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+                }
+              }}
               className="h-full w-full object-cover opacity-70 transition-opacity duration-300 group-hover:opacity-100"
             />
             <span className="absolute inset-0 grid place-items-center">

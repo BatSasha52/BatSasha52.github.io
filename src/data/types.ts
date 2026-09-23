@@ -1,6 +1,7 @@
 export type CategoryId =
   | "tools"
   | "engine"
+  | "software"
   | "unity"
   | "unreal";
 

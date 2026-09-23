@@ -119,6 +119,36 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "kvstore",
+    name: "kvstore",
+    category: "software",
+    summary:
+      "Embedded key-value store in C++ with an append-only log, crash recovery and crash-safe compaction.",
+    description: [
+      "A small database engine in the style of Bitcask: every write is appended to a log on disk, an in-memory index maps each key to its file and offset, and the index is rebuilt by replaying the log on startup. The same core idea sits underneath the write-ahead logs in Postgres and SQLite and the storage layer in LevelDB and RocksDB.",
+      "Built as a deliberate break from game work, to show core engineering fundamentals on their own: a checksummed on-disk format, recovery that survives a process being killed mid-write, compaction that cannot lose data if interrupted, and a concurrency model that lets reads run in parallel with an exclusive writer. Developed on Linux and brought to a clean pass on Windows, which surfaced real platform differences in file sharing and line endings.",
+    ],
+    role: "Solo developer",
+    highlights: [
+      "Checksummed, self-delimiting on-disk record format with tombstone deletes",
+      "Crash recovery by log replay, stopping cleanly at torn or corrupt records",
+      "Compaction that stays safe at every crash point, verified by test",
+      "Reader-writer locking with per-thread file handles for parallel reads",
+      "Ordered prefix and range scans, a REPL, and a TCP server",
+      "35 Catch2 test cases passing on Linux (GCC) and Windows (MSVC)",
+    ],
+    tech: [
+      "C++",
+      "CMake",
+      "Catch2",
+      "File I/O & fsync",
+      "Concurrency",
+      "TCP sockets",
+      "Cross-platform",
+    ],
+    links: [{ label: "GitHub", url: "https://github.com/BatSasha52/kvstore" }],
+  },
+  {
     slug: "buildpilot",
     name: "BuildPilot",
     category: "tools",

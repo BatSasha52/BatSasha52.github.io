@@ -14,6 +14,12 @@ export const categories: Category[] = [
       "Low-level C++: rendering, concurrency, and production engine internals.",
   },
   {
+    id: "software",
+    label: "Software Engineering",
+    blurb:
+      "Systems and backend work outside games: storage engines, concurrency and cross-platform C++.",
+  },
+  {
     id: "unity",
     label: "Unity",
     blurb: "Shipped and in-development games built in Unity and C#.",

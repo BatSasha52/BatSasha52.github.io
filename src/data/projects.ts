@@ -68,6 +68,7 @@ export const projects: Project[] = [
     slug: "no-saints",
     name: "No Saints",
     category: "unity",
+    featured: true,
     summary:
       "Multiplayer FPS diploma project set in an alternative-history 1930s USA.",
     description: [

@@ -37,7 +37,18 @@ export const skills: SkillGroup[] = [
   },
   {
     title: "Teamwork",
-    items: ["Professional Communication", "Team Collaboration", "Leading Teams"],
+    items: [
+      "Git",
+      "Perforce",
+      "GitHub Actions",
+      "CI/CD",
+      "Build automation",
+      "pytest",
+      "PowerShell",
+      "Jira",
+      "Claude Code",
+      "Model Context Protocol (MCP)",
+    ],
   },
   {
     title: "Tools & Collaboration",

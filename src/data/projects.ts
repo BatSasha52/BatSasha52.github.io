@@ -412,6 +412,7 @@ export const projects: Project[] = [
       "Animation Blueprints built and edited by an AI agent through AnimMCPToolset",
     ],
     tech: ["Unreal Engine", "C++", "Claude Code", "Model Context Protocol (MCP)"],
+    links: [{ label: "GitHub", url: "https://github.com/BatSasha52/FreeFlow" }],
   },
   {
     slug: "crypt-raider",

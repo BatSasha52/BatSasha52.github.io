@@ -320,6 +320,35 @@ export const projects: Project[] = [
     links: [],
   },
   {
+    slug: "portfolio-e2e-tests",
+    name: "Portfolio E2E Tests",
+    category: "software",
+    year: "2026",
+    summary:
+      "End-to-end Playwright suite in TypeScript that tests this portfolio site on Chromium, Firefox and WebKit, with a CI workflow that publishes the report.",
+    description: [
+      "A browser test suite for the live site, written in TypeScript with Playwright and structured with the Page Object Model: one page object per page owns the selectors and user actions, and the spec files read as plain scenarios with no raw selectors in them. Tests cover navigation to every route, the category and technology filters on the Projects page, and a mobile viewport check that the navigation adapts instead of silently breaking.",
+      "The CV download test follows the link and checks for a 200 status and a PDF content type, rather than only checking that a link exists. It exists because this site's CV link once served the 404 page instead of the PDF. The base URL is set by an environment variable, so the same suite runs against the live site or localhost. A GitHub Actions workflow runs it on every push and pull request and uploads the HTML report as an artifact.",
+    ],
+    role: "Solo developer",
+    highlights: [
+      "Page Object Model: spec files contain scenarios only, selectors live in page objects",
+      "Runs on Chromium, Firefox and WebKit as separate Playwright projects",
+      "CV test verifies a 200 status and a PDF content type, not just that a link is present",
+      "Covers routes, category and technology filters, and a mobile navigation check",
+      "Target URL set by an environment variable: live site or localhost",
+      "GitHub Actions runs it on every push and pull request and publishes the HTML report",
+    ],
+    tech: [
+      "Playwright",
+      "TypeScript",
+      "Page Object Model",
+      "Cross-browser testing",
+      "GitHub Actions",
+    ],
+        links: [{ label: "GitHub", url: "https://github.com/BatSasha52/portfolio-e2e" }],
+  },
+  {
     slug: "salvager",
     name: "Salvager",
     category: "unity",

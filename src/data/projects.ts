@@ -32,11 +32,40 @@ export const categories: Category[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    slug: "call-of-duty-modern-warfare-4",
+    name: "Call of Duty: Modern Warfare 4",
+    category: "engine",
+    featured: true,
+    year: "2026",
+    summary:
+      "Credited on a shipped AAA title for asset build pipeline work at Activision Central Tech.",
+    description: [
+      "First-person shooter developed by Infinity Ward and published by Activision. The campaign follows a full-scale war on the Korean Peninsula, alongside multiplayer and DMZ.",
+      "I am credited on the game for my internship at Activision Central Tech, where I worked on the asset build pipeline shared across Call of Duty titles: caching and parallelisation to cut map compilation time, with every refactor verified to leave the output binary-identical.",
+    ],
+    role: "Engine programming intern",
+    highlights: [
+      "Listed in the game's credits",
+      "Asset build pipeline work in a large-scale C++ codebase",
+      "Caching and parallelisation to reduce map compilation time",
+      "Verified binary-identical output after refactoring",
+    ],
+    tech: [
+      "C++",
+      "COD Engine",
+      "Perforce",
+      "Multithreading",
+      "Caching & hashing",
+      "Build pipelines",
+    ],
+    links: [],
+    videos: [{ label: "Call of Duty: Modern Warfare 4 — trailer", youtubeId: "qeFVhw4YNbM" }],
+  },
    {
     slug: "call-of-duty-black-ops-7",
     name: "Call of Duty: Black Ops 7",
     category: "engine",
-    featured: true,
     year: "2025",
     summary:
       "Asset build pipeline work on a shipped AAA title at Activision Central Tech.",

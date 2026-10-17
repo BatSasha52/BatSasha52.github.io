@@ -6,7 +6,7 @@ import { useSeo } from "../hooks/useSeo";
 export default function Contact() {
   useSeo({
     title: `Contact — ${profile.name}`,
-    description: `Get in touch with ${profile.name} — ${profile.role} based in Warsaw, Poland.`,
+    description: `Get in touch with ${profile.name} — ${profile.role}.`,
   });
 
   const links = profile.contacts.filter((c) => c.url);
@@ -52,9 +52,6 @@ export default function Contact() {
             >
               Download CV
             </a>
-            <p className="mt-6 border-t border-edge pt-5 font-mono text-[0.72rem] text-dim">
-              {profile.location}
-            </p>
           </div>
         </Reveal>
       </div>

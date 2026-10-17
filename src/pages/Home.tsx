@@ -40,11 +40,6 @@ export default function Home() {
             className="grid w-full items-center gap-12 md:grid-cols-[1.35fr_1fr]"
           >
             <div>
-              <motion.p variants={item} className="rule-label mb-5 flex items-center gap-3">
-                <span className="inline-block h-px w-8 bg-signal" />
-                {profile.location}
-              </motion.p>
-
               <motion.h1 variants={item} className="text-hero text-bone">
                 {profile.name}
               </motion.h1>

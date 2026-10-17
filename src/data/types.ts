@@ -61,7 +61,6 @@ export interface Profile {
   name: string;
   role: string;
   tagline: string;
-  location: string;
   intro: string;
   bio: string[];
   photo: string;

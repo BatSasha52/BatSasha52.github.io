@@ -4,14 +4,13 @@ export const profile: Profile = {
   name: "Oleksandr Pryimak",
   role: "Programmer, game developer",
   tagline: "C++ · C# · Python · Unreal Engine 5 · Unity · Multithreading",
-  location: "Warsaw, Poland (open to relocation)",
 
   intro:
     "Ex-Activision programming intern. Computer Science bachelor specializing in game development, with practical experience in Unity and Unreal Engine, C++ software engineering, game design and level design.",
 
   bio: [
-    "I am a gameplay and engine programmer based in Warsaw. I work in C++, C# and Python, across Unreal Engine, Unity and proprietary engine code.",
-    "At Activision Central Tech I worked in a large-scale C++ codebase on the asset build pipeline for Call of Duty: Black Ops 7. I added conditional cache loading and saving based on transient zone entity hash, parallelized functions to improve CPU usage, and reduced compilation time of certain classes by up to 99% (67 sec to 0.14 sec). Every refactor had to leave the output binary-identical, which was verified through systematic testing.",
+    "I am a gameplay and engine programmer. I work in C++, C# and Python, across Unreal Engine, Unity and proprietary engine code.",
+    "At Activision Central Tech I worked in a large-scale C++ codebase on the asset build pipeline for Call of Duty: Black Ops 7 and Call of Duty: Modern Warfare 4. I added conditional cache loading and saving based on transient zone entity hash, parallelized functions to improve CPU usage, and reduced compilation time of certain classes by up to 99% (67 sec to 0.14 sec). Every refactor had to leave the output binary-identical, which was verified through systematic testing.",
     "At Cenoir Studios I work on gameplay. I implemented the character movement system using MVP architecture and ScriptableObject-based state machines, I am integrating KINEMATION procedural animation for movement, and I work with the Zenject dependency injection framework across a feature-oriented architecture.",
     "Alongside production work I build developer tooling: command-line tools for build automation, release notes and crash triage, written in Python and integrated with Git and CI.",
   ],

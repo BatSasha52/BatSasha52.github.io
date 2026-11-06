@@ -3,19 +3,6 @@ import type { ExperienceEntry } from "./types";
 export const experience: ExperienceEntry[] = [
   {
     kind: "work",
-    role: "Gameplay Programmer",
-    org: "Cenoir Studios",
-    start: "Jan 2026",
-    end: "Present",
-    location: "Warsaw, Poland",
-    points: [
-      "Implemented the character movement system using MVP architecture and ScriptableObject-based state machines.",
-      "Integrating KINEMATION procedural animation for movement.",
-      "Working with the Zenject dependency injection framework across a feature-oriented architecture.",
-    ],
-  },
-  {
-    kind: "work",
     role: "Programming Intern",
     org: "Activision Central Tech",
     start: "Sep 2025",
@@ -27,6 +14,33 @@ export const experience: ExperienceEntry[] = [
       "Parallelised functions to improve CPU utilisation and overall performance.",
       "Reduced compilation time of certain classes by up to 99% (67 sec to 0.14 sec).",
       "Verified binary-identical output after refactoring through systematic code testing. Version control with Perforce.",
+    ],
+  },
+  {
+    kind: "work",
+    role: "Video Game Tester (FQA)",
+    org: "Lionbridge Games",
+    start: "Aug 2026",
+    end: "Nov 2026",
+    location: "Warsaw, Poland",
+    points: [
+      "Executed test cases and wrote detailed bug reports.",
+      "Collaborated with AAA studios and QA teams as a manual functional tester on live game builds.",
+      "Tracked bugs and managed tasks in Jira.",
+      "Followed corporate QA guidelines and confidentiality requirements.",
+    ],
+  },
+  {
+    kind: "work",
+    role: "Gameplay Programmer",
+    org: "Cenoir Studios",
+    start: "Jan 2026",
+    end: "Present",
+    location: "Warsaw, Poland",
+    points: [
+      "Implemented the character movement system using MVP architecture and ScriptableObject-based state machines.",
+      "Integrating KINEMATION procedural animation for movement.",
+      "Working with the Zenject dependency injection framework across a feature-oriented architecture.",
     ],
   },
   {

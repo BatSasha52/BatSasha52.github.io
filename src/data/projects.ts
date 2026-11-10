@@ -203,7 +203,6 @@ export const projects: Project[] = [
     slug: "crashtriage",
     name: "crashtriage",
     category: "tools",
-    featured: true,
     summary:
       "CLI that clusters duplicate crash logs, pulls the crashing source and git blame, and produces root-cause reports.",
     description: [
@@ -304,6 +303,7 @@ export const projects: Project[] = [
     slug: "kvstore",
     name: "kvstore",
     category: "software",
+    featured: true,
     summary:
       "Embedded key-value store in C++ with an append-only log, crash recovery and crash-safe compaction.",
     description: [
@@ -329,6 +329,40 @@ export const projects: Project[] = [
       "Cross-platform",
     ],
     links: [{ label: "GitHub", url: "https://github.com/BatSasha52/kvstore" }],
+  },
+  {
+    slug: "streaming-platform-db",
+    name: "Streaming Platform Database",
+    category: "software",
+    year: "2024",
+    summary:
+      "Relational database for a video-on-demand service, implemented twice: Oracle PL/SQL and SQL Server T-SQL, each with its own procedures, triggers and reporting queries.",
+    description: [
+      "A 15-table schema in third normal form for a streaming service: content catalogue, cast and crew, subscriptions, watchlists, watch history and user reviews. Person is a supertype of Actor and Director, and many-to-many relationships are resolved with junction tables. The model was designed in Vertabelo and implemented for both Oracle Database 23ai and SQL Server 2022, with drop, schema, seed, procedural code, demo and reporting scripts for each.",
+      "Built for the Database Systems course at PJATK in January 2024, then refactored to fix concurrency and data-integrity problems in the original. SELECT MAX(ID) + 1 keys became identity columns, rules that lived in trigger code became CHECK and UNIQUE constraints, and the T-SQL triggers became set-based, because the originals read inserted into scalar variables and silently handled only one row of a multi-row statement. RAISERROR inside a trigger did not roll back the statement, so weak passwords were saved anyway; it was replaced with THROW.",
+      "On the Oracle side, the average-score trigger is a compound trigger that collects affected titles per row and recalculates them once after the statement, which avoids the mutating-table error (ORA-04091) on multi-row DML. A demo script exercises every rule, including the expected failures, and rolls everything back at the end.",
+    ],
+    role: "Solo developer",
+    highlights: [
+      "Same 15-table, 3NF model implemented in Oracle PL/SQL and SQL Server T-SQL",
+      "Business rules enforced with constraints first, triggers and procedures only where a constraint cannot express them",
+      "Mutating-table-safe Oracle compound trigger keeping a derived average score correct on multi-row DML",
+      "Set-based T-SQL triggers, transactions with XACT_ABORT, THROW and TRY/CATCH",
+      "PL/SQL package with explicit cursors, %TYPE anchoring, RETURNING INTO and custom error codes",
+      "Refactored coursework: race-free identity keys, correct DECIMAL precision, errors that actually stop the change",
+      "Demo scripts that run every rule and its expected failures, then roll back",
+    ],
+    tech: [
+      "SQL",
+      "Oracle Database",
+      "PL/SQL",
+      "SQL Server",
+      "T-SQL",
+      "Relational modelling",
+      "Vertabelo",
+      "Docker",
+    ],
+    links: [{ label: "GitHub", url: "https://github.com/BatSasha52/streaming-platform-db" }],
   },
   {
     slug: "buildpilot",
